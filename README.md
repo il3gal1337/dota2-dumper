@@ -1,6 +1,6 @@
-# cs2-dumper
+# dota2-dumper
 
-An external offset/interface dumper for Dota 2
+An external offset/class dumper for Dota 2
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ You can download the latest release from [Releases](https://github.com/il3gal133
 ## Usage
 
 1. Ensure the game is running (Being in the main menu should suffice).
-2. Run the `dota2-dumper` executable.
+2. Run the `dota2-dumper` executable. (SOON)
 
 ## License
 
