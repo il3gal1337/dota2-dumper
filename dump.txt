@@ -1,24 +1,11 @@
 ========================================
   Dota 2 Dump
-  Time: Sun Jun 28 00:25:10 2026
+  Time: Thu Jul  2 08:40:42 2026
 ========================================
 
-[+] ===============POINTERS=================
-
-[+] PrepareUnitOrders = 0x1b4c0e0;
-[+] EntityList = 0x5d25ce0;
-[+] ViewMatrix = 0x60e9470;
-[+] GameEntitySystem = 0x181445d;
-[+] CDotaCameraManager = 0x6124650;
-[+] GlobalVars = 0x60e487;
-[+] CGCClient = 0x193c563;
-[+] SendMessage = 0x5fabf0;
-[+] ExecuteUICommand = 0x194b6f0;
-[+] AcceptMatchHandler = 0x50090;
-
-[+] ========================================
-
-2159
+path: C:\dota2\
+[+] Total scopes found: 21
+NumSchema: 2159
 class DamageShareEvent_t // server
 {
 	float32 m_flOriginalDamage; // 0x0
@@ -4368,28 +4355,29 @@ class CDOTAOverworldDefinition // client
 	OverworldTokenID_t m_unPathUnlockerTokenID; // 0x240
 	int32 m_unFortuneCountForPermanentReward; // 0x244
 	int32 m_unTimesFortuneCanBeSeenBeforeRepeats; // 0x248
-	int32 m_nMaxTokenCap; // 0x252
-	CUtlVector< CDOTAEventActionTrigger > m_vecEventActionTriggers; // 0x256
-	CUtlVector< CDOTAEventActionGrantAndClaimPairTrigger > m_vecEventActionGrantAndClaimPairTriggers; // 0x280
-	CUtlVector< CDOTAOverworldPathColorRule > m_vecPathColorRules; // 0x304
-	CUtlString m_strNarrationVisualNovel; // 0x328
-	CUtlOrderedMap< CUtlString, CUtlString > m_mapNarrationDialogues; // 0x336
-	CDOTAOverworldTheme m_Theme; // 0x840
-	CUtlVector< CDOTAOverworldToken* > m_vecTokenTypes; // 0x896
-	CUtlVector< CDOTAOverworldTarotCard* > m_vecTarotCards; // 0x944
-	CUtlVector< CDOTAOverworldFortuneTellerReward* > m_vecFortuneTellerRewards; // 0x968
-	CUtlVector< CDOTAOverworldFortuneForcedReveal* > m_vecFortuneForcedReveals; // 0x992
-	CUtlVector< CDOTAOverworldFortuneTellerFixedReward* > m_vecFortuneTellerFixedReward; // 0x1016
-	CUtlVector< CDOTAOverworldFortuneTellerStoryNode* > m_vecFortuneTellerStoryNodes; // 0x1040
-	CUtlVector< CDOTAOverworldHeroReward* > m_vecHeroRewards; // 0x1104
-	CUtlVector< CDOTAOverworldNode* > m_vecNodes; // 0x1128
-	CUtlVector< CDOTAOverworldPath* > m_vecPaths; // 0x1152
-	CUtlVector< CDOTAOverworldRoom* > m_vecRooms; // 0x1176
-	CUtlVector< CDOTAOverworldEncounter* > m_vecEncounters; // 0x1200
-	CUtlVector< CDOTAOverworldHero* > m_vecHeroes; // 0x1224
-	CUtlVector< CDOTAOverworldCharacter* > m_vecCharacters; // 0x1248
-	CUtlVector< CDOTAOverworldClickable* > m_vecClickables; // 0x1272
-	CUtlVector< CDOTAOverworldRoomGroup* > m_vecRoomGroups; // 0x1496
+	CUtlVector< int32 > m_vecFortuneWeightForUnseenAmount; // 0x256
+	int32 m_nMaxTokenCap; // 0x280
+	CUtlVector< CDOTAEventActionTrigger > m_vecEventActionTriggers; // 0x288
+	CUtlVector< CDOTAEventActionGrantAndClaimPairTrigger > m_vecEventActionGrantAndClaimPairTriggers; // 0x312
+	CUtlVector< CDOTAOverworldPathColorRule > m_vecPathColorRules; // 0x336
+	CUtlString m_strNarrationVisualNovel; // 0x360
+	CUtlOrderedMap< CUtlString, CUtlString > m_mapNarrationDialogues; // 0x368
+	CDOTAOverworldTheme m_Theme; // 0x872
+	CUtlVector< CDOTAOverworldToken* > m_vecTokenTypes; // 0x928
+	CUtlVector< CDOTAOverworldTarotCard* > m_vecTarotCards; // 0x976
+	CUtlVector< CDOTAOverworldFortuneTellerReward* > m_vecFortuneTellerRewards; // 0x1000
+	CUtlVector< CDOTAOverworldFortuneForcedReveal* > m_vecFortuneForcedReveals; // 0x1024
+	CUtlVector< CDOTAOverworldFortuneTellerFixedReward* > m_vecFortuneTellerFixedReward; // 0x1048
+	CUtlVector< CDOTAOverworldFortuneTellerStoryNode* > m_vecFortuneTellerStoryNodes; // 0x1072
+	CUtlVector< CDOTAOverworldHeroReward* > m_vecHeroRewards; // 0x1136
+	CUtlVector< CDOTAOverworldNode* > m_vecNodes; // 0x1160
+	CUtlVector< CDOTAOverworldPath* > m_vecPaths; // 0x1184
+	CUtlVector< CDOTAOverworldRoom* > m_vecRooms; // 0x1208
+	CUtlVector< CDOTAOverworldEncounter* > m_vecEncounters; // 0x1232
+	CUtlVector< CDOTAOverworldHero* > m_vecHeroes; // 0x1256
+	CUtlVector< CDOTAOverworldCharacter* > m_vecCharacters; // 0x1280
+	CUtlVector< CDOTAOverworldClickable* > m_vecClickables; // 0x1304
+	CUtlVector< CDOTAOverworldRoomGroup* > m_vecRoomGroups; // 0x1528
 };
 
 class CCommentarySystem // server
@@ -7960,6 +7948,7 @@ class CandyShopRewardOption_t // client
 {
 	CandyShopRewardOptionID_t m_unRewardOptionID; // 0x0
 	CUtlString m_sRewardClass; // 0x8
+	bool m_bDisplayIfAlreadyOwned; // 0x16
 };
 
 class CMonsterHunterHeroDefinition // server
@@ -30158,13 +30147,13 @@ enum PhysGenericShapeType_t : uint8_t
 };
 
 
-7
+NumSchema: 7
 
-59
+NumSchema: 59
 
-8
+NumSchema: 8
 
-58
+NumSchema: 58
 class CEntityInstance // entity2
 {
 	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
@@ -30198,9 +30187,9 @@ class CEntityIdentity // entity2
 };
 
 
-15
+NumSchema: 15
 
-125
+NumSchema: 125
 class CPulseCell_Step_TestDomainDestroyFakeEntity : public CPulseCell_BaseFlow // pulse_system
 {
 };
@@ -30789,9 +30778,9 @@ enum PulseCursorWakePriority_t : uint32_t
 };
 
 
-1
+NumSchema: 1
 
-662
+NumSchema: 662
 class CPulseCell_WaitForCursorsWithTag : public CPulseCell_WaitForCursorsWithTagBase // pulse_runtime_lib
 {
 	bool m_bTagSelfWhenComplete; // 0x296
@@ -31195,17 +31184,17 @@ enum PulseCursorWakePriority_t : uint32_t
 };
 
 
-113
+NumSchema: 113
 
-0
+NumSchema: 0
 
-151
+NumSchema: 151
 
-17
+NumSchema: 17
 
-9
+NumSchema: 9
 
-33
+NumSchema: 33
 class CEntityInstance // entity2
 {
 	CUtlSymbolLarge m_iszPrivateVScripts; // 0x8
@@ -31239,7 +31228,7 @@ class CEntityIdentity // entity2
 };
 
 
-496
+NumSchema: 496
 class CPulseCell_WaitForCursorsWithTag : public CPulseCell_WaitForCursorsWithTagBase // pulse_runtime_lib
 {
 	bool m_bTagSelfWhenComplete; // 0x296
@@ -31628,7 +31617,7 @@ enum PulseCursorWakePriority_t : uint32_t
 };
 
 
-7534
+NumSchema: 7534
 class CDOTA_Modifier_AghsFort_Arcanist_Potion : public CDOTA_Buff // server
 {
 	int32 m_nCooldownReductionPct; // 0x6744
@@ -31828,6 +31817,7 @@ class CSequenceTransitioner2 // server
 	CBaseAnimatingController* m_pOwner; // 0x336
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Razor : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nTargetAngle; // 0x7936
@@ -32047,6 +32037,7 @@ class CDOTA_Unit_Brewmaster_PrimalStorm : public CDOTA_BaseNPC_Creep // server
 	ParticleIndex_t m_nFXStormAmbient2; // 0x6356
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_JungleVarmint : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -32609,10 +32600,12 @@ class CDOTA_Ability_Special_Bonus_MP_100 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Tusk : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Venomancer : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -32757,6 +32750,7 @@ class CDOTA_MapTree : public CDOTA_BinaryObject // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Balloon : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -32886,6 +32880,7 @@ class CEconItemAttribute // server
 	float32 m_flValue; // 0x52
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_FacelessVoid : public CDOTA_BaseNPC_Hero // server
 {
 	VectorWS m_vecStanceDestinationPoint; // 0x7936
@@ -33174,6 +33169,7 @@ class CDOTA_Ability_Special_Bonus_HP_Regen_8 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Centaur : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -33304,6 +33300,7 @@ class CPulseCell_Base // pulse_runtime_lib
 	PulseDocNodeID_t m_nEditorNodeID; // 0x8
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Life_Stealer : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -33447,6 +33444,7 @@ class CDOTA_Unit_AghsFort_Creature_DungeonBat : public CDOTA_BaseNPC_Creature //
 	ParticleIndex_t m_nFXAmbient; // 0x6688
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Marci : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -33455,6 +33453,7 @@ class CDOTA_NPCSpawnerGoodBot : public CDOTA_NPCSpawner // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Healer : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -33630,11 +33629,13 @@ class CDOTA_Ability_Special_Bonus_Mana_Break_35 : public CDOTABaseAbility // ser
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Shop : public CDOTA_BaseNPC_Building // server
 {
 	DOTA_SHOP_TYPE m_ShopType; // 0x6584
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_LotusPool : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -34137,6 +34138,7 @@ class CDOTA_Ability_Special_Bonus_Armor_12 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Tidehunter : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -34542,11 +34544,13 @@ class CDOTAGameEvents : public CBaseEntity // server
 	CEntityIOOutput m_OnGameStarted; // 0x1296
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Oracle : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Juggernaut : public CDOTA_BaseNPC_Hero // server
 {
 	uint32 m_unOmniKills; // 0x7936
@@ -34698,6 +34702,7 @@ class CDOTA_Ability_Special_Bonus_Reincarnation_200 : public CDOTABaseAbility //
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_HallofFame : public CDOTA_BaseNPC_Building // server
 {
 	int32 m_event_dota_player_team_changed; // 0x6600
@@ -35000,6 +35005,7 @@ class CTouchExpansionComponent : public CEntityComponent // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Silencer : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -35222,6 +35228,7 @@ class CDOTA_Ability_Special_Bonus_Cleave_150 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Effigy_AghsFort : public CDOTA_BaseNPC_Building // server
 {
 	uint32 m_unStatusEffectIndex; // 0x6584
@@ -35231,11 +35238,13 @@ class CDOTA_Unit_Falconers_Glove_Hawk : public CDOTA_BaseNPC_Creep // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Lion : public CDOTA_BaseNPC_Hero // server
 {
 	uint32 m_unFingerPrestigeKills; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Effigy_BattleCup : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -35363,10 +35372,12 @@ class CDOTA_Ability_Special_Bonus_Gold_lvl15_l : public CDOTA_Ability_Special_Bo
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Zuus : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_VengefulSpirit : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bArcanaEquipped; // 0x7936
@@ -35551,6 +35562,7 @@ class CDOTA_Ability_Special_Bonus_Corruption_5 : public CDOTABaseAbility // serv
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DarkSeer : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nNormalPunchBuffIndex; // 0x7936
@@ -35670,6 +35682,7 @@ class CDOTA_Modifier_SandKing_SandStorm_Slow : public CDOTA_Buff // server
 
 class CDOTA_Modifier_DarkCarnival_Pied : public CDOTA_Buff // server
 {
+	ParticleIndex_t m_nFXIndex; // 0x6744
 };
 
 class CDOTA_Ability_DarkCarnival_Firework : public CDOTABaseAbility // server
@@ -35993,37 +36006,37 @@ class CDOTA_TeamCommander // server
 	CUtlVector< CHandle< CBaseEntity > > m_hProposedTeamfightUnits; // 0x2088
 	CHandle< CBaseEntity > m_hTeamfightTarget; // 0x2112
 	VectorWS m_vTeamfightTargetLoc; // 0x2116
-	CountdownTimer m_WardCalculationTimer; // 0x2128
-	float32[24] m_fHeroSelectionTimes; // 0x2176
-	VectorWS m_vBaseLocation; // 0x2296
-	VectorWS m_vPregameGatherLocation; // 0x2308
-	CUtlVector< CHandle< CBaseEntity > > m_AllUnits; // 0x2320
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedUnits; // 0x2344
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedHeroes; // 0x2368
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedCreeps; // 0x2392
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedWards; // 0x2416
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedBuildings; // 0x2440
-	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedOther; // 0x2464
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyUnits; // 0x2488
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyHeroes; // 0x2512
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyCreeps; // 0x2536
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyWards; // 0x2560
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyBuildings; // 0x2584
-	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyOther; // 0x2608
-	CUtlVector< CHandle< CBaseEntity > > m_AllNeutralCreeps; // 0x2632
-	CUtlVector< CHandle< CBaseEntity > > m_ThinkerUnits; // 0x2656
-	CUtlVector< CHandle< CBaseEntity > > m_AllUnitsIncludingDead; // 0x2680
-	CUtlVector< CHandle< CBaseEntity > > m_hCouriers; // 0x2752
-	CUtlVector< CHandle< CBaseEntity > > m_hDisabledBots; // 0x2776
-	GameTime_t m_fGoodLuckFlavorTextTime; // 0x3680
-	GameTime_t m_fTeamfightFlavorTextTime; // 0x3684
-	GameTime_t m_fCongratulateHeroFlavorTextTime; // 0x3688
-	GameTime_t m_fLastAliveHeroHistorySnapshotTime; // 0x3692
-	int32 m_iAliveHeroHistoryIndex; // 0x3696
-	int32[5] m_iAliveHeroHistory; // 0x3700
-	GameTime_t m_fPlayerDraftChooseTime; // 0x3720
-	CUtlString m_sScriptDirectory; // 0x3736
-	HSCRIPT m_hHeroSelectionScriptScope; // 0x3class CDOTA_Ability_AghsFort_ExplosiveBarrel : public CDOTABaseAbility // server
+	DOTA_LANE m_eTeamDefenseLane; // 0x2128
+	GameTime_t m_flTeamDefenseStarted; // 0x2132
+	CountdownTimer m_WardCalculationTimer; // 0x2136
+	float32[24] m_fHeroSelectionTimes; // 0x2184
+	VectorWS m_vBaseLocation; // 0x2304
+	VectorWS m_vPregameGatherLocation; // 0x2316
+	CUtlVector< CHandle< CBaseEntity > > m_AllUnits; // 0x2328
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedUnits; // 0x2352
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedHeroes; // 0x2376
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedCreeps; // 0x2400
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedWards; // 0x2424
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedBuildings; // 0x2448
+	CUtlVector< CHandle< CBaseEntity > > m_AllAlliedOther; // 0x2472
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyUnits; // 0x2496
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyHeroes; // 0x2520
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyCreeps; // 0x2544
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyWards; // 0x2568
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyBuildings; // 0x2592
+	CUtlVector< CHandle< CBaseEntity > > m_AllEnemyOther; // 0x2616
+	CUtlVector< CHandle< CBaseEntity > > m_AllNeutralCreeps; // 0x2640
+	CUtlVector< CHandle< CBaseEntity > > m_ThinkerUnits; // 0x2664
+	CUtlVector< CHandle< CBaseEntity > > m_AllUnitsIncludingDead; // 0x2688
+	CUtlVector< CHandle< CBaseEntity > > m_hCouriers; // 0x2760
+	CUtlVector< CHandle< CBaseEntity > > m_hDisabledBots; // 0x2784
+	GameTime_t m_fGoodLuckFlavorTextTime; // 0x3688
+	GameTime_t m_fTeamfightFlavorTextTime; // 0x3692
+	GameTime_t m_fCongratulateHeroFlavorTextTime; // 0x3696
+	GameTime_t m_fLastAliveHeroHistorySnapshotTime; // 0x3700
+	int32 m_iAliveHeroHistoryIndex; // 0x3704
+	int32[5] m_iAliveHeroHistory; // 0x3708
+	GameTime_t m_fPlayerDraftChooseTime; // 0x3728class CDOTA_Ability_AghsFort_ExplosiveBarrel : public CDOTABaseAbility // server
 {
 };
 
@@ -36288,6 +36301,7 @@ class CDOTA_Ability_Special_Bonus_TrueStrike : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Furion : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -36416,10 +36430,12 @@ class CFuncVehicleClip : public CBaseModelEntity // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_TrollWarlord : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_SDKTower : public CDOTA_BaseNPC_Tower // server
 {
 };
@@ -36773,6 +36789,7 @@ class CDOTA_DarkWillow_Creature : public CDOTA_BaseNPC // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DarkWillow : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -37019,6 +37036,7 @@ class CPulseCell_WaitForObservable : public CPulseCell_BaseYieldingInflow // pul
 	CPulse_ResumePoint m_OnTrue; // 0x336
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Broodmother : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -37435,11 +37453,13 @@ class CHitboxComponent : public CEntityComponent // server
 	float32 m_flBoundsExpandRadius; // 0x20
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Winter_Wyvern : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Visage : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -37605,6 +37625,7 @@ class CDOTA_Ability_Special_Bonus_Attack_Damage_18 : public CDOTABaseAbility // 
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Venomancer_PlagueWard : public CDOTA_BaseNPC_Additive // server
 {
 	bool m_bIsMovable; // 0x6304
@@ -37750,6 +37771,7 @@ class CDOTA_Ability_Special_Bonus_Cleave_175 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_AghsFort_Watch_Tower : public CDOTA_BaseNPC_Building // server
 {
 	int32 m_nOptionNumber; // 0x6600
@@ -37771,6 +37793,7 @@ class CDOTA_BaseNPC_AghsFort_Watch_Tower : public CDOTA_BaseNPC_Building // serv
 	float32 m_flGoalCaptureProgress; // 0x6688
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Kunkka : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nFXIndex; // 0x7936
@@ -37894,6 +37917,7 @@ class CPathQueryComponent : public CEntityComponent // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_MonkeyKing : public CDOTA_BaseNPC_Hero // server
 {
 	uint32 m_nTreeDisguise; // 0x7936
@@ -37909,6 +37933,7 @@ class CDOTA_Unit_Earth_Spirit_Stone : public CDOTA_BaseNPC // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Spectre : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bArcanaKillstreakCompleted; // 0x7936
@@ -37918,10 +37943,12 @@ class CDOTA_Unit_Hero_Spectre : public CDOTA_BaseNPC_Hero // server
 	bool m_bArcanaKillstreakRecordBroken; // 0x7944
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_QueenOfPain : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Enigma : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -38439,6 +38466,7 @@ class CDOTA_Ability_Special_Bonus_Intelligence_12 : public CDOTABaseAbility // s
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Phoenix : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXAmbientSpirits; // 0x7936
@@ -38451,6 +38479,7 @@ class CDOTA_Unit_SpiritBear : public CDOTA_BaseNPC_Hero // server
 	bool m_bStolen; // 0x7937
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_CustomEffigy : public CDOTA_BaseNPC_Building // server
 {
 	uint32 m_unStatusEffectIndex; // 0x6584
@@ -38645,6 +38674,7 @@ class CBodyComponentBaseAnimating : public CBodyComponentSkeletonInstance // ser
 	CBaseAnimatingController m_animationController; // 0x1248
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Alchemist : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -39114,6 +39144,7 @@ class CDOTA_Ability_Special_Bonus_Attack_Damage_65 : public CDOTABaseAbility // 
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Beastmaster_Hawk : public CDOTA_Unit_Hero_Beastmaster_Beasts // server
 {
 };
@@ -39512,6 +39543,7 @@ class CDOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Grimstroke_3 : public CDO
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Lich : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -40079,6 +40111,7 @@ class CIngameEvent_TI6 : public CIngameEvent_Base // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_AbyssalUnderlord : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -40214,6 +40247,7 @@ class CDotaSubquestEntityDeath : public CDotaSubquestBase // server
 	CUtlVector< CUtlSymbolLarge > m_entityNameList; // 0x1776
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Largo : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -40347,6 +40381,7 @@ class CPlayer_MovementServices : public CPlayerPawnComponent // server
 	QAngle m_vecOldViewAngles; // 0x576
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Dawnbreaker : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nAttackState; // 0x7936
@@ -41035,6 +41070,7 @@ class CPulseCell_FireCursors : public CPulseCell_BaseYieldingInflow // pulse_run
 	CPulse_ResumePoint m_OnFinished; // 0x248
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_PrimalBeast : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -41294,6 +41330,7 @@ class CDOTA_NPC_Treant_EyesInTheForest : public CDOTA_BaseNPC_Additive // server
 	bool m_bIsBlind; // 0x6304
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_StormSpirit : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -41470,6 +41507,7 @@ class CDOTA_Ability_Special_Bonus_Spell_Block_20 : public CDOTABaseAbility // se
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Puck : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -41632,10 +41670,12 @@ class CPulseCell_Timeline::TimelineEvent_t // pulse_runtime_lib
 	CPulse_OutflowConnection m_EventOutflow; // 0x8
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Ogre_Magi : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Fort : public CDOTA_BaseNPC_Building // server
 {
 	uint32 m_unRandomSeed; // 0x6584
@@ -42560,6 +42600,7 @@ class audioparams_t // server
 	uint32 soundEventHash; // 0x116
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Magnataur : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -42983,6 +43024,7 @@ class CDOTA_Unit_Undying_Tombstone : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_BountyHunter : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -43179,10 +43221,12 @@ class PulseNodeDynamicOutflows_t::DynamicOutflow_t // pulse_runtime_lib
 	CPulse_OutflowConnection m_Connection; // 0x8
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon_Dire : public CDOTA_BaseNPC_Seasonal_TI11_Balloon // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Beastmaster : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -43628,14 +43672,17 @@ class CBasePulseGraphInstance // pulse_runtime_lib
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Tusk_Sigil : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Earthshaker : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
@@ -44156,6 +44203,7 @@ class CDOTA_Ability_Special_Bonus_24_Crit_2 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Terrorblade : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
@@ -44485,6 +44533,7 @@ class CDOTA_Ability_Special_Bonus_Spell_Lifesteal_10 : public CDOTABaseAbility /
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_AncientApparition : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -44592,10 +44641,12 @@ class CDOTA_Ability_Special_Bonus_Undefined : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_HoldoutTower_HeavySlow : public CDOTA_BaseNPC_HoldoutTower // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_HoldoutTower : public CDOTA_BaseNPC_Tower // server
 {
 	DOTA_HOLDOUT_TOWER_TYPE m_iTowerType; // 0x6624
@@ -44753,6 +44804,7 @@ class CLogicDistanceCheck : public CLogicalEntity // server
 	CEntityIOOutput m_InZone3; // 0x1248
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_PhantomLancer : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bInventoryEnabled; // 0x7936
@@ -45106,6 +45158,7 @@ class CLogicBranch : public CLogicalEntity // server
 	CEntityIOOutput m_OnFalse; // 0x1232
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Tinker : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -45651,6 +45704,7 @@ class CPulseCell_WaitForCursorsWithTagBase : public CPulseCell_BaseYieldingInflo
 	CPulse_ResumePoint m_WaitComplete; // 0x224
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_ShadowShaman_SerpentWard : public CDOTA_BaseNPC_Additive // server
 {
 	QAngle m_angle; // 0x6304
@@ -45981,6 +46035,7 @@ class CIngameEvent_NB2020 : public CIngameEvent_Base // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Roshans_Banner : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -46153,6 +46208,7 @@ class CGameSceneNode // server
 	float32 m_flClientLocalScale; // 0x264
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Trap_Ward : public CDOTA_BaseNPC_Creature // server
 {
 	CUtlSymbolLarge m_iszDefaultAnim; // 0x6688
@@ -46297,6 +46353,7 @@ class CPlayer_ObserverServices : public CPlayerPawnComponent // server
 	bool m_bForcedObserverMode; // 0x84
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Shadow_Demon : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -46812,6 +46869,7 @@ class CPulse_InvokeBinding // pulse_runtime_lib
 	int32 m_nSrcInstruction; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Treant : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -46990,6 +47048,7 @@ class InventoryQuickBuyState_t // server
 	QuickBuySlot_t m_stickyItemSlot; // 0x120
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Hero : public CDOTA_BaseNPC_Additive // server
 {
 	float32 m_flStrength; // 0x6456
@@ -47399,6 +47458,7 @@ class CDOTASubChallengeInfo // server
 	int32 nCompleted; // 0x88
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Weaver : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -47753,10 +47813,12 @@ class CDOTA_Ability_Special_Bonus_Corruption_25 : public CDOTABaseAbility // ser
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Medusa : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creep_Talking : public CDOTA_BaseNPC_Creep // server
 {
 };
@@ -48038,10 +48100,12 @@ class CDOTA_Unit_Announcer_Killing_Spree : public CDOTA_Unit_Announcer // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Omniknight : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creep : public CDOTA_BaseNPC_Additive // server
 {
 	CDOTA_CreepKillInfo m_KillInfo; // 0x6304
@@ -48881,10 +48945,12 @@ class CDOTA_Unit_Nian : public CDOTA_BaseNPC_Creature // server
 	CHandle< CBaseEntity > m_hHorn; // 0x6716
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Pudge : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_DarkCarnival_Balloon : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -49084,10 +49150,12 @@ class CDOTA_Ability_Special_Bonus_Attack_Speed_55 : public CDOTABaseAbility // s
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DrowRanger : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Pet : public CDOTA_BaseNPC // server
 {
 	CHandle< CDOTA_BaseNPC_Hero > m_hHeroHandle; // 0x6304
@@ -49288,14 +49356,17 @@ class CDOTA_Unit_Elder_Titan_AncestralSpirit : public CDOTA_BaseNPC_Additive // 
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Enchantress : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Leshrac : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Necrolyte : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -49554,6 +49625,7 @@ class CNetworkedSequenceOperation // server
 	float32 m_flPrevCycleForAnimEventDetection; // 0x36
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creep_Lane : public CDOTA_BaseNPC_Creep // server
 {
 	FowCustomTeams_t m_nFoWTeam; // 0x6380
@@ -49751,6 +49823,7 @@ class CEntityInstance // entity2
 	CScriptComponent* m_CScriptComponent; // 0x40
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Additive : public CDOTA_BaseNPC // server
 {
 };
@@ -49915,6 +49988,7 @@ class CDOTA_Ability_Special_Bonus_All_Stats_15 : public CDOTABaseAbility // serv
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Building : public CDOTA_BaseNPC // server
 {
 	int32 m_iDamageLevel; // 0x6304
@@ -50265,6 +50339,7 @@ class CPlayer_AutoaimServices : public CPlayerPawnComponent // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_TemplarAssassin : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -50430,6 +50505,7 @@ class CDOTACourierController // server
 	DebugOverlayBits_t m_eDebugBits; // 0x184
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Beastmaster_Boar : public CDOTA_Unit_Hero_Beastmaster_Beasts // server
 {
 };
@@ -51123,6 +51199,7 @@ class CQuickBuyController // server
 	int32 m_nSuggestItemIdx; // 0x364
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Snapfire : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -51131,6 +51208,7 @@ class CDOTA_Unit_Fountain : public CDOTA_BaseNPC_Building // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Tiny : public CDOTA_BaseNPC_Hero // server
 {
 	CHandle< CBaseEntity > m_hTreeWearable; // 0x7936
@@ -51284,10 +51362,12 @@ class CEnvDetailController : public CBaseEntity // server
 	float32 m_flFadeEndDist; // 0x1180
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Mirana : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Promo : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -51786,14 +51866,17 @@ class CDOTA_Ability_Special_Bonus_All_Stats_6 : public CDOTABaseAbility // serve
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Void_Spirit : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Huskar : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Riki : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -51954,6 +52037,7 @@ class CEntityComponent // entity2
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Viper : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -52488,6 +52572,7 @@ class CDOTAGamerulesProxy : public CGameRulesProxy // server
 	CDOTAGameRules* m_pGameRules; // 0x1176
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Nevermore : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
@@ -52974,6 +53059,7 @@ class CDOTATurboHeroPickRules : public CDOTABaseCustomHeroPickRules // server
 	DOTACustomHeroPickRulesPhase_t m_Phase; // 0x1176
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_XP_Fountain : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -53554,6 +53640,7 @@ class CPulseCell_Inflow_EntOutputHandler : public CPulseCell_Inflow_BaseEntrypoi
 	CPulseValueFullType m_ExpectedParamType; // 0x160
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Elder_Titan : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -53677,6 +53764,7 @@ class CDOTA_SimpleObstruction : public CBaseEntity // server
 	bool m_bBlockingGridNav; // 0x1208
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Lycan : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -54515,10 +54603,12 @@ class CPulseCell_Outflow_CycleOrdered::InstanceState_t // pulse_runtime_lib
 	int32 m_nNextIndex; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Hoodwink : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Axe : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -55768,6 +55858,7 @@ class CPulseCell_LimitCount::InstanceState_t // pulse_runtime_lib
 	int32 m_nCurrentCount; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Morphling : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -55915,6 +56006,7 @@ class CGameRulesProxy : public CBaseEntity // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Thinker : public CDOTA_BaseNPC // server
 {
 	bool m_bSendToAllPlayers; // 0x6304
@@ -56251,6 +56343,7 @@ class CIngameEvent_TI2020 : public CIngameEvent_Base // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Launchpad : public CDOTA_BaseNPC_Building // server
 {
 	int32 m_iStrength; // 0x6584
@@ -56456,11 +56549,13 @@ class CBaseModelEntity::OnDamageLevelChangedArgs_t // server
 	int32 nPrevDamageLevel; // 0x12
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public CDOTA_BaseNPC_Additive // server
 {
 	ParticleIndex_t m_nFXIndex; // 0x6304
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Sven : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -56831,10 +56926,12 @@ class CDestructiblePartsComponent // server
 	CAnimGraphControllerPtr m_pAnimGraphDestructibleGraphController; // 0x104
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_NightStalker : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Warlock_Golem : public CDOTA_BaseNPC_Creep // server
 {
 };
@@ -57197,10 +57294,12 @@ class CDOTA_Ability_Special_Bonus_Movement_Speed_35 : public CDOTABaseAbility //
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Dazzle : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Bloodseeker : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -57507,6 +57606,7 @@ class PulseNodeDynamicOutflows_t // pulse_runtime_lib
 	CUtlVector< PulseNodeDynamicOutflows_t::DynamicOutflow_t > m_Outflows; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Mars : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -57662,6 +57762,7 @@ class CPlayer_MovementServices_Humanoid : public CPlayer_MovementServices // ser
 	Vector m_vecSmoothedVelocity; // 0x644
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_Snowman : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -57883,6 +57984,7 @@ class CPulseCell_IsRequirementValid::Criteria_t // pulse_runtime_lib
 	bool m_bIsValid; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Jakiro : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -58223,12 +58325,14 @@ class CPulseCell_Inflow_ObservableVariableListener : public CPulseCell_Inflow_Ba
 	bool m_bSelfReference; // 0x130
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Largo_Frogling : public CDOTA_BaseNPC_Additive // server
 {
 	CHandle< CDOTA_BaseNPC_Hero > m_hHeroHandle; // 0x6304
 	int32 m_nFroglingIndex; // 0x6308
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Undying : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -58674,6 +58778,7 @@ class CSoundOpvarSetOBBEntity : public CSoundOpvarSetAABBEntity // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creature : public CDOTA_BaseNPC_Creep // server
 {
 	bool m_bInitialized; // 0x6352
@@ -59396,6 +59501,7 @@ class CPulseCell_Outflow_CycleOrdered : public CPulseCell_BaseFlow // pulse_runt
 	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Tinker_Turret : public CDOTA_BaseNPC_Additive // server
 {
 	QAngle m_angle; // 0x6304
@@ -59577,6 +59683,7 @@ class CCollisionProperty // server
 	float32 m_flCapsuleRadius; // 0x172
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Slark : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -59751,10 +59858,12 @@ class QuickBuySlot_t // server
 	int32 m_nItemIndex; // 0x80
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Brewmaster : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Windrunner : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nTargetAngle; // 0x7936
@@ -59896,6 +60005,7 @@ class CDOTA_Ability_Special_Bonus_Strength_3 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_EmberSpirit : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -60701,6 +60811,7 @@ class CDotaTutorialNetworker : public CBaseEntity // server
 	char[256] m_QuickBuyStr; // 0x2876
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Chen : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -61358,6 +61469,7 @@ class CDotaSubquestTutorialEvent : public CDotaSubquestBase // server
 	CUtlSymbolLarge m_sTutorialEvent; // 0x1776
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DragonKnight : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -61485,6 +61597,7 @@ class CDOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Crystal_Maiden_6 : public
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Muerta : public CDOTA_BaseNPC_Hero // server
 {
 	CHandle< CBaseEntity > m_hDoubleShotTarget; // 0x7936
@@ -61818,6 +61931,7 @@ class CDOTA_Ability_Special_Bonus_Spell_Lifesteal_50 : public CDOTABaseAbility /
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Bristleback : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -62059,11 +62173,13 @@ class CDOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Meepo_4 : public CDOTABas
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Grimstroke : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Rubick : public CDOTA_BaseNPC_Hero // server
 {
 	Vector m_stolenAbilityColorHSV1; // 0x7936
@@ -62821,6 +62937,7 @@ class CDOTA_Ability_Special_Bonus_HP_250 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_Penguin : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -63163,11 +63280,13 @@ class CEffectData // server
 	uint16 m_iEffectName; // 0x108
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Obsidian_Destroyer : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Invoker_Forged_Spirit : public CDOTA_BaseNPC_Creep // server
 {
 };
@@ -63410,6 +63529,7 @@ class CPulseCell_Outflow_CycleShuffled : public CPulseCell_BaseFlow // pulse_run
 	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_ArcWarden : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nTalkFXIndex; // 0x7936
@@ -63417,10 +63537,12 @@ class CDOTA_Unit_Hero_ArcWarden : public CDOTA_BaseNPC_Hero // server
 	ParticleIndex_t m_nTempestFX; // 0x7944
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Clinkz : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_SandKing : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -63543,6 +63665,7 @@ class CDOTA_Ability_Special_Bonus_Status_Resistance_10 : public CDOTABaseAbility
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_SkeletonKing : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nSkeletonWarriors; // 0x7936
@@ -63755,6 +63878,7 @@ class CLightComponent : public CEntityComponent // server
 	bool m_bPvsModifyEntity; // 0x440
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creep_Neutral : public CDOTA_BaseNPC_Creep // server
 {
 	CountdownTimer m_ThinkTimer; // 0x6352
@@ -63901,6 +64025,7 @@ class CDOTAAppCheers : public CBaseEntity // server
 	ECrowdLevel m_nDireCrowdLevel; // 0x1348
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Wisp : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nAmbientFXIndex; // 0x7936
@@ -64632,6 +64757,7 @@ class CPulseCell_BaseValue : public CPulseCell_Base // pulse_runtime_lib
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Ursa : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -64807,10 +64933,12 @@ class CPulseCell_BooleanSwitchState : public CPulseCell_BaseState // pulse_runti
 	CPulse_OutflowConnection m_WhenFalse; // 0x408
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Nyx_Assassin : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Creep_Siege : public CDOTA_BaseNPC_Creep_Lane // server
 {
 };
@@ -65000,6 +65128,7 @@ class VPhysicsCollisionAttribute_t // server
 	uint8 m_nCollisionFunctionMask; // 0x47
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_HoldoutTower_LightFast : public CDOTA_BaseNPC_HoldoutTower // server
 {
 };
@@ -65223,6 +65352,7 @@ class CDOTA_Ability_Special_Bonus_Unique_Furion : public CDOTABaseAbility // ser
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Gyrocopter : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -65244,6 +65374,7 @@ class CDOTA_Unit_Miniboss : public CDOTA_BaseNPC_Additive // server
 	ParticleIndex_t nShieldFX; // 0x6352
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Barracks : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -65402,6 +65533,7 @@ class CPulseCell_Inflow_Yield : public CPulseCell_BaseYieldingInflow // pulse_ru
 	CPulse_ResumePoint m_UnyieldResume; // 0x216
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_CNY_Balloon : public CDOTA_BaseNPC_Additive // server
 {
 };
@@ -65572,6 +65704,7 @@ class CDOTA_Unit_Templar_Gate : public CDOTA_BaseNPC_Building // server
 	CHandle< CBaseEntity > m_hOtherPortal; // 0x6584
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Sniper : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -66124,6 +66257,7 @@ class CPulseCell_Unknown : public CPulseCell_Base // pulse_runtime_lib
 	KeyValues3 m_UnknownKeys; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_KeeperOfTheLight : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -66484,6 +66618,7 @@ class CDOTA_Unit_Grimstroke_InkCreature : public CDOTA_BaseNPC // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Meepo : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bRecursionGuard; // 0x7936
@@ -66650,19 +66785,23 @@ class CDOTA_Ability_Special_Bonus_Attack_Speed_10 : public CDOTABaseAbility // s
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_ChaosKnight : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Rattletrap : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Pugna : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_nAimAngle; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Filler : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -67109,6 +67248,7 @@ class CPhysMotor : public CLogicalEntity // server
 	CMotorController m_motor; // 0x1248
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Warlock : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -67265,6 +67405,7 @@ class CDOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Rubick_5 : public CDOTABa
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_NeutralItemStash : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -67422,11 +67563,13 @@ class CDOTA_Ability_Special_Bonus_Gold_lvl20_r : public CDOTA_Ability_Special_Bo
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Techies : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bLastDeathFromSuicide; // 0x7936
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DeathProphet : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -67624,6 +67767,7 @@ class CPulse_BlackboardReference // pulse_runtime_lib
 	CGlobalSymbol m_NodeName; // 0x32
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_RotatableBuilding : public CDOTA_BaseNPC // server
 {
 };
@@ -67783,6 +67927,7 @@ class CSoundEventSphereEntity : public CSoundEventEntity // server
 	float32 m_flRadius; // 0x1368
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Hero::KillInfo_t // server
 {
 	CUtlSymbolLarge m_victimname; // 0x0
@@ -67809,6 +67954,7 @@ class CDOTA_Ability_Special_Bonus_HP_Regen_14 : public CDOTABaseAbility // serve
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_LoneDruid : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -67967,6 +68113,7 @@ class CDOTA_Ability_Special_Bonus_MP_Regen_250 : public CDOTABaseAbility // serv
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Disruptor : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -67975,6 +68122,7 @@ class CODTA_Unit_Warlock_Imp : public CDOTA_BaseNPC_Creep // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_AntiMage : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -68605,10 +68753,12 @@ class CDOTAGameRules : public CMultiplayRules // server
 	HeroID_t nVictimHeroID; // 0x12
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_SpiritBreaker : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Effigy_Statue : public CDOTA_BaseNPC_Building // server
 {
 };
@@ -69600,10 +69750,12 @@ class CDOTA_Ability_Special_Bonus_Movement_Speed_Percentage_6 : public CDOTABase
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Naga_Siren : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Lina : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -69779,10 +69931,12 @@ class CDOTA_Ability_Special_Bonus_Corruption_4 : public CDOTABaseAbility // serv
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Batrider : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Roshan : public CDOTA_BaseNPC_Additive // server
 {
 	int32 m_iKillerTeam; // 0x6304
@@ -70129,6 +70283,7 @@ class CIngameEvent_FV2019 : public CIngameEvent_Base // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Legion_Commander : public CDOTA_BaseNPC_Hero // server
 {
 	uint32 m_unDuelsWon; // 0x7936
@@ -70712,6 +70867,7 @@ class CIngameEvent_TI2024 : public CIngameEvent_Base // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Luna : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -70904,6 +71060,7 @@ class CScriptTriggerHurt : public CTriggerHurt // server
 	Vector m_vExtent; // 0x2424
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Tower : public CDOTA_BaseNPC_Building // server
 {
 	CEntityIOOutput m_OnTowerKilled; // 0x6584
@@ -71002,6 +71159,7 @@ class CDOTA_Modifier_Tower_Aura_Bonus : public CDOTA_Buff // server
 	bool m_bSentFirstRefresh; // 0x6754
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Hero::sHeroDamageInfo // server
 {
 	PlayerID_t nDamagingPlayerID; // 0x0
@@ -71025,6 +71183,7 @@ class CDOTA_ArcanaDataEntity_Razor : public CDOTA_ArcanaDataEntity_Base // serve
 	int32 m_nEmpoweredKills; // 0x48
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_HoldoutTower_ReduceSpeed : public CDOTA_BaseNPC_HoldoutTower // server
 {
 };
@@ -71900,6 +72059,7 @@ class CPulse_CallInfo // pulse_runtime_lib
 	int32 m_nSrcInstruction; // 0x80
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Clinkz_Skeleton_Army : public CDOTA_BaseNPC // server
 {
 };
@@ -71908,6 +72068,7 @@ class CDOTA_Unit_CustomGameAnnouncer : public CDOTA_BaseNPC // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_RespawningTower : public CDOTA_BaseNPC_Tower // server
 {
 };
@@ -72138,10 +72299,12 @@ class CPulseCell_InlineNodeSkipSelector : public CPulseCell_BaseFlow // pulse_ru
 	CPulse_OutflowConnection m_FailOutflow; // 0x104
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Drums : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Skywrath_Mage : public CDOTA_BaseNPC_Hero // server
 {
 	bool m_bArcanaEquipped; // 0x7936
@@ -72284,6 +72447,7 @@ class CServerOnlyPointEntity : public CServerOnlyEntity // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Abaddon : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -72419,6 +72583,7 @@ class CDOTA_Ability_Special_Bonus_Movement_Speed_90 : public CDOTABaseAbility //
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Invoker : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -72928,6 +73093,7 @@ class CPlayer_WeaponServices : public CPlayerPawnComponent // server
 	bool m_bPreventWeaponPickup; // 0x168
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Kez : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -74333,10 +74499,12 @@ class CDOTA_Ability_Special_Bonus_Intelligence_10 : public CDOTABaseAbility // s
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_EarthSpirit : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Watch_Tower : public CDOTA_BaseNPC_Building // server
 {
 	CUtlSymbolLarge m_szOutpostName; // 0x6584
@@ -75465,10 +75633,12 @@ class CDOTA_Ability_Special_Bonus_MP_Regen_6 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_WitchDoctor : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_ShadowShaman : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -75676,14 +75846,17 @@ class CDOTA_Ability_Special_Bonus_All_Stats_14 : public CDOTABaseAbility // serv
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_Dragon : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Pangolier : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_CrystalMaiden : public CDOTA_BaseNPC_Hero // server
 {
 	int32 m_iParticleMouthIndex; // 0x7936
@@ -75792,6 +75965,7 @@ class CDOTA_Unit_Underlord_Portal : public CDOTA_BaseNPC_Building // server
 	CHandle< CBaseEntity > m_hOtherPortal; // 0x6584
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Bane : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -76143,6 +76317,7 @@ class CDOTA_Ability_Special_Bonus_MP_Regen_3 : public CDOTABaseAbility // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC : public NextBotCombatCharacter // server
 {
 	bool m_bPledgedOfrenda; // 0x2328
@@ -76247,7 +76422,7 @@ class CDOTA_BaseNPC : public NextBotCombatCharacter // server
 	int32 m_iGoldBountyMax; // 0x3156
 	PlayerID_t m_nFarmClaimPlayerID; // 0x3160
 	PlayerID_t m_nPlayerOwnerID; // 0x3164
-	CUtlSymbolLarge[40] m_iszAbilityList; /class CFilterTeam : public CBaseFilter // server
+	CUtlSymbolLarge[40class CFilterTeam : public CBaseFilter // server
 {
 	int32 m_iFilterTeam; // 0x1232
 };
@@ -76376,14 +76551,17 @@ class CDOTA_Ability_CDOTA_Ability_Special_Bonus_Unique_Spirit_Breaker_2 : public
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Ringmaster : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_DoomBringer : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Beastmaster_Beasts : public CDOTA_BaseNPC_Creep_Talking // server
 {
 };
@@ -76653,6 +76831,7 @@ class CBasePlayerWeaponVData // server
 	CUtlOrderedMap< WeaponSound_t, CSoundEventName > m_aShootSounds; // 0x1256
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_PhantomAssassin : public CDOTA_BaseNPC_Hero // server
 {
 	ParticleIndex_t m_nFXDeath; // 0x7936
@@ -77025,6 +77204,7 @@ class CEnvCubemap : public CBaseEntity // server
 	bool m_Entity_bEnabled; // 0x1400
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Hero::sHeroRecentModifierInfo // server
 {
 	PlayerID_t nSourcePlayerID; // 0x0
@@ -77362,14 +77542,17 @@ class CDOTA_Ability_Special_Bonus_Cast_Range_125 : public CDOTABaseAbility // se
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Monkey : public CDOTA_BaseNPC_Additive // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Shredder : public CDOTA_BaseNPC_Hero // server
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Slardar : public CDOTA_BaseNPC_Hero // server
 {
 };
@@ -77681,7 +77864,8 @@ enum CFuncMover::OrientationUpdate_t : uint32_t
 };
 
 
-7186
+NumSchema: 7186
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Shop : public C_DOTA_BaseNPC_Building // client
 {
 	DOTA_SHOP_TYPE m_ShopType; // 0x6688
@@ -78027,6 +78211,7 @@ class CDOTA_Modifier_Pet : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_JungleVarmint : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -78260,6 +78445,7 @@ class CPulseCell_WaitForCursorsWithTag : public CPulseCell_WaitForCursorsWithTag
 	PulseCursorCancelPriority_t m_nDesiredKillPriority; // 0x300
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Life_Stealer : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -78404,6 +78590,7 @@ class C_SceneEntity::QueuedEvents_t // client
 	float32 starttime; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Bane : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -78522,15 +78709,18 @@ class CDOTA_Modifier_Juggernaut_Vaulted_Strike : public CDOTA_Buff // client
 	float32 jump_attack_radius; // 0x6788
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Winter_Wyvern : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_EmberSpirit : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_TemplarAssassin : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -78676,6 +78866,7 @@ class CDOTA_Modifier_LegacyChargeCounter : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Balloon : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -78949,6 +79140,7 @@ class CDOTA_Modifier_BattleCupEffigy : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_SDKTower : public C_DOTA_BaseNPC_HoldoutTower // client
 {
 };
@@ -79086,18 +79278,22 @@ class CDOTA_Modifier_Buyback_Gold_Penalty : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Centaur : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Pudge : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_HoldoutTower_HeavySlow : public C_DOTA_BaseNPC_HoldoutTower // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Healer : public C_DOTA_BaseNPC_Building // client
 {
 	ParticleIndex_t m_iRangeFX; // 0x6688
@@ -79403,6 +79599,7 @@ class C_SoundOpvarSetPointBase : public C_BaseEntity // client
 	bool m_bFastRefresh; // 0x1549
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Marci : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -79979,6 +80176,7 @@ class CDOTA_Modifier_CrystalMaiden_FreezingField : public CDOTA_Buff // client
 	int32 can_move; // 0x6864
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Lich : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -80810,6 +81008,7 @@ class CPulseCell_LerpCameraSettings : public CPulseCell_BaseLerp // client
 	PointCameraSettings_t m_End; // 0x308
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_MonkeyKing : public C_DOTA_BaseNPC_Hero // client
 {
 	uint32 m_nTreeDisguise; // 0x7552
@@ -80817,6 +81016,7 @@ class C_DOTA_Unit_Hero_MonkeyKing : public C_DOTA_BaseNPC_Hero // client
 	CHandle< C_BaseEntity > m_hTreeDisguiseEnt; // 0x7560
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_ShadowShaman_SerpentWard : public C_DOTA_BaseNPC_Additive // client
 {
 	QAngle m_angle; // 0x6576
@@ -81005,6 +81205,7 @@ class CDOTA_Unit_Falconers_Glove_Hawk : public C_DOTA_BaseNPC_Creep // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Effigy_AghsFort : public C_DOTA_BaseNPC_Building // client
 {
 	uint32 m_unStatusEffectIndex; // 0x6688
@@ -81314,6 +81515,7 @@ class C_BaseModelEntity::Emphasized_Phoneme // client
 	bool m_bValid; // 0x30
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Axe : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -81431,6 +81633,7 @@ class CDOTA_Modifier_SandKing_SandStorm_Slow : public CDOTA_Buff // client
 
 class CDOTA_Modifier_DarkCarnival_Pied : public CDOTA_Buff // client
 {
+	ParticleIndex_t m_nFXIndex; // 0x6744
 };
 
 class CPulseCell_PickBestOutflowSelector : public CPulseCell_BaseFlow // pulse_runtime_lib
@@ -81439,6 +81642,7 @@ class CPulseCell_PickBestOutflowSelector : public CPulseCell_BaseFlow // pulse_r
 	PulseSelectorOutflowList_t m_OutflowList; // 0x80
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Windrunner : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nTargetAngle; // 0x7552
@@ -81610,6 +81814,7 @@ class CDOTA_Modifier_Bane_FiendsGrip_Cast_Illusion : public CDOTA_Buff // client
 	float32 fiend_grip_tick_interval; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Zuus : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -81801,6 +82006,7 @@ class CDOTA_Modifier_Hexed : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Medusa : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -82400,6 +82606,7 @@ class CPulseCell_WaitForObservable : public CPulseCell_BaseYieldingInflow // pul
 	CPulse_ResumePoint m_OnTrue; // 0x336
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Furion : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -82748,6 +82955,7 @@ class CHitboxComponent : public CEntityComponent // client
 	float32 m_flBoundsExpandRadius; // 0x20
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creep : public C_DOTA_BaseNPC_Additive // client
 {
 	float32 m_flAim; // 0x6576
@@ -82866,10 +83074,12 @@ class CDOTA_Modifier_Morphling_Scepter : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Clinkz_Skeleton_Army : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Launchpad : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -83001,10 +83211,12 @@ class CDOTA_Modifier_Silencer_GlaivesOfWisdom_SilenceDebuffCounter : public CDOT
 	ParticleIndex_t m_nFXStackIndex; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Brewmaster : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_AghsFort_Watch_Tower : public C_DOTA_BaseNPC_Building // client
 {
 	int32 m_nOptionNumber; // 0x6688
@@ -83120,6 +83332,7 @@ class CPathQueryComponent : public CEntityComponent // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Mirana : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -83594,6 +83807,7 @@ class CDOTA_Modifier_TeamShowcase_Showcase : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_CustomEffigy : public C_DOTA_BaseNPC_Building // client
 {
 	uint32 m_unStatusEffectIndex; // 0x6688
@@ -83795,10 +84009,12 @@ class CIngameEvent_Fall2021 : public C_IngameEvent_Base // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Alchemist : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_PhantomLancer : public C_DOTA_BaseNPC_Hero // client
 {
 	bool m_bInventoryEnabled; // 0x7552
@@ -84348,6 +84564,7 @@ class CDOTA_Modifier_FixedNumberOfHitsToKill : public CDOTA_Buff // client
 	int32 attack_count; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Invoker : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -85234,6 +85451,7 @@ class CDOTA_Modifier_Earthshaker_EnchantTotem_Leap : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_AbyssalUnderlord : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_iRangeFX; // 0x7552
@@ -85349,6 +85567,7 @@ class CDOTA_Modifier_Animation_LeftClawSwipe : public CDOTA_Buff // client
 	CUtlVector< CHandle< C_BaseEntity > > m_vHitEntities; // 0x6760
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Largo : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -85507,6 +85726,7 @@ class CPlayer_MovementServices : public CPlayerPawnComponent // client
 	QAngle m_vecOldViewAngles; // 0x576
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Dawnbreaker : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nAttackState; // 0x7552
@@ -86128,10 +86348,12 @@ class CPulseCell_FireCursors : public CPulseCell_BaseYieldingInflow // pulse_run
 	CPulse_ResumePoint m_OnFinished; // 0x248
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_PrimalBeast : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Riki : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -86292,6 +86514,7 @@ class C_SoundOpvarSetOBBWindEntity : public C_SoundOpvarSetPointBase // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Lion : public C_DOTA_BaseNPC_Hero // client
 {
 	uint32 m_unFingerPrestigeKills; // 0x7552
@@ -86548,6 +86771,7 @@ class CDOTA_Modifier_SkeletonKing_BoneGuard_DamageTracker : public CDOTA_Buff //
 	CHandle< C_DOTABaseAbility > m_hBoneGuardSourceAbility; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Shadow_Demon : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -86740,6 +86964,7 @@ class CPulseCell_Timeline::TimelineEvent_t // pulse_runtime_lib
 	CPulse_OutflowConnection m_EventOutflow; // 0x8
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Earthshaker : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
@@ -88072,6 +88297,7 @@ class PulseNodeDynamicOutflows_t::DynamicOutflow_t // pulse_runtime_lib
 	CPulse_OutflowConnection m_Connection; // 0x8
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon_Dire : public CDOTA_BaseNPC_Seasonal_TI11_Balloon // client
 {
 };
@@ -88496,6 +88722,7 @@ class C_DOTA_DarkWillow_Creature : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI11_Balloon : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -89357,6 +89584,7 @@ class C_DOTA_NPC_Treant_EyesInTheForest : public C_DOTA_BaseNPC_Additive // clie
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_AncientApparition : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -89466,14 +89694,17 @@ class CDOTA_Modifier_Morphling_Morph_Str_Intrinsic : public CDOTA_Buff // client
 	float32 morph_rate; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DeathProphet : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_ShadowShaman : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Fort : public C_DOTA_BaseNPC_Building // client
 {
 	uint32 m_unRandomSeed; // 0x6856
@@ -89611,6 +89842,7 @@ class CDOTA_Modifier_Axe_CounterHelix : public CDOTA_Buff // client
 	int32 trigger_attacks; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Invoker_Forged_Spirit : public C_DOTA_BaseNPC_Creep // client
 {
 };
@@ -89620,6 +89852,7 @@ class CDOTAPropPlusPlayerGuildBanner : public C_DOTA_GuildBannerDynamic // clien
 	int32 m_nPlayerID; // 0x3440
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creep_Lane : public C_DOTA_BaseNPC_Creep // client
 {
 	FowCustomTeams_t m_nFoWTeam; // 0x6584
@@ -89755,6 +89988,7 @@ class CDOTA_Modifier_Rune_Arcane : public CDOTA_Buff // client
 	int32 m_iCostReductionPct; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_SkeletonKing : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nSkeletonWarriors; // 0x7552
@@ -89888,6 +90122,7 @@ class CDOTA_Modifier_AncientApparition_IceAge : public CDOTA_Buff // client
 	float32 damage; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Tinker : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -90174,6 +90409,7 @@ class CPulseCell_Inflow_BaseEntrypoint : public CPulseCell_BaseFlow // pulse_run
 	PulseRegisterMap_t m_RegisterMap; // 0x80
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Disruptor : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -90331,6 +90567,7 @@ class CPulseCell_WaitForCursorsWithTagBase : public CPulseCell_BaseYieldingInflo
 	CPulse_ResumePoint m_WaitComplete; // 0x224
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Oracle : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
@@ -90934,10 +91171,12 @@ class CPlayer_ObserverServices : public CPlayerPawnComponent // client
 	GameTime_t m_flObserverChaseDistanceCalcTime; // 0x92
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Treant : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Barracks : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -91109,10 +91348,12 @@ class CAttributeManager::cached_attribute_float_t // client
 	float32 flOut; // 0x16
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Hoodwink : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Wisp : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nAmbientFXIndex; // 0x7552
@@ -91125,6 +91366,7 @@ class C_DOTA_Unit_Hero_Wisp : public C_DOTA_BaseNPC_Hero // client
 	float32 m_flPrevHealth; // 0x7572
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Warlock_Golem : public C_DOTA_BaseNPC_Creep // client
 {
 };
@@ -91762,6 +92004,7 @@ class CDOTA_Modifier_Activity_Modifier : public CDOTA_Buff // client
 	CUtlSymbolLarge m_activityModifier; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Building : public C_DOTA_BaseNPC // client
 {
 	int32 m_iDamageLevel; // 0x6576
@@ -92541,6 +92784,7 @@ class CDOTA_Unit_Announcer_Killing_Spree : public CDOTA_Unit_Announcer // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Sven : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -92900,6 +93144,7 @@ class CPulseCell_IntervalTimer : public CPulseCell_BaseYieldingInflow // pulse_r
 	SignatureOutflow_Continue m_OnInterval; // 0x288
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Skywrath_Mage : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -93230,10 +93475,12 @@ class C_DOTA_Unit_Brewmaster_PrimalStorm : public C_DOTA_BaseNPC_Creep // client
 	ParticleIndex_t m_nFXStormAmbient2; // 0x6588
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Beastmaster_Beasts : public C_DOTA_BaseNPC_Creep_Talking // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_DarkCarnival_Balloon : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -93628,6 +93875,7 @@ class CDOTA_Unit_Elder_Titan_AncestralSpirit : public C_DOTA_BaseNPC_Additive //
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_KeeperOfTheLight : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -93944,14 +94192,17 @@ class CEntityInstance // entity2
 	CScriptComponent* m_CScriptComponent; // 0x40
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Visage : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Venomancer : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Enigma : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -95016,6 +95267,7 @@ class C_DOTA_Unit_SpiritBear : public C_DOTA_BaseNPC_Hero // client
 	bool m_bStolen; // 0x7553
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_AntiMage : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -95355,10 +95607,12 @@ class CQuickBuyController // client
 	bool m_bIsLocalPlayer; // 0x320
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Snapfire : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Filler : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -95733,6 +95987,7 @@ class C_DOTA_Unit_IngisFatuus : public C_DOTA_BaseNPC_Additive // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_XP_Fountain : public C_DOTA_BaseNPC_Building // client
 {
 	ParticleIndex_t m_nFxRing; // 0x6688
@@ -95923,6 +96178,7 @@ class CPulseCell_BaseFlow : public CPulseCell_Base // pulse_runtime_lib
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Clinkz : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -96137,10 +96393,12 @@ class CDOTA_Modifier_Rune_DoubleDamage : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Void_Spirit : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_TrollWarlord : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -96297,6 +96555,7 @@ class CEntityComponent // entity2
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Watch_Tower : public C_DOTA_BaseNPC_Building // client
 {
 	ParticleIndex_t m_iRangeFX; // 0x6688
@@ -96747,16 +97006,19 @@ class CDOTA_Modifier_SkeletonKing_HellfireBlast : public CDOTA_Buff // client
 	int32 blast_slow; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Muerta : public C_DOTA_BaseNPC_Hero // client
 {
 	CHandle< C_BaseEntity > m_hDoubleShotTarget; // 0x7552
 	QAngle m_qStartAngle; // 0x7556
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Viper : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Tower : public C_DOTA_BaseNPC_Building // client
 {
 	ParticleIndex_t m_nAltHeldRangeFX; // 0x6688
@@ -97238,10 +97500,12 @@ class CDOTA_Modifier_Disarmed : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Tidehunter : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_SandKing : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -97427,6 +97691,7 @@ class CDOTA_Modifier_Teleporting : public CDOTA_Buff // client
 	VectorWS m_vEnd; // 0x6760
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DrowRanger : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -97592,6 +97857,7 @@ class C_DOTA_NPC_Techies_Minefield_Sign : public C_DOTA_BaseNPC_Additive // clie
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Luna : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -97780,10 +98046,12 @@ class CPulseCell_Inflow_EntOutputHandler : public CPulseCell_Inflow_BaseEntrypoi
 	CPulseValueFullType m_ExpectedParamType; // 0x160
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Elder_Titan : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Obsidian_Destroyer : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
@@ -97912,6 +98180,7 @@ class CHeroesPerPlayer // client
 	C_NetworkUtlVectorBase< HeroID_t > m_vecHeroIDs; // 0x48
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Magnataur : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -98178,6 +98447,7 @@ class CPlayer_FlashlightServices : public CPlayerPawnComponent // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Beastmaster_Hawk : public C_DOTA_Unit_Hero_Beastmaster_Beasts // client
 {
 };
@@ -98717,10 +98987,12 @@ class CDOTA_Modifier_Item_Imbue_Choice : public CDOTA_Buff // client
 	AbilityID_t m_nItemID; // 0x6756
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Tusk : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC : public C_NextBotCombatCharacter // client
 {
 	bool m_bIsPhantom; // 0x2960
@@ -98822,8 +99094,7 @@ class C_DOTA_BaseNPC : public C_NextBotCombatCharacter // client
 	bool m_bForceScepterState; // 0x4590
 	bool m_bForceShardState; // 0x4591
 	bool m_bPrevProvidesVision; // 0x4592
-	uint64 m_nPrevControllableMask; // 0x4600
-	Countdclass CDOTA_Item_Recipe_Diffusal_Blade2 : public C_DOTA_Item_Recipe_Diffusal_Blade // client
+	uint64 m_nPrevControllableMaclass CDOTA_Item_Recipe_Diffusal_Blade2 : public C_DOTA_Item_Recipe_Diffusal_Blade // client
 {
 };
 
@@ -99244,10 +99515,12 @@ class CDOTA_NPC_Observer_Ward_TrueSight : public CDOTA_NPC_Observer_Ward // clie
 	CEntityHandle m_hAbilityEntity; // 0x6604
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Silencer : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_HoldoutTower_ReduceSpeed : public C_DOTA_BaseNPC_HoldoutTower // client
 {
 };
@@ -99612,6 +99885,7 @@ class CPropDataComponent : public CEntityComponent // client
 	int32 m_nMotionDisabledSpawnFlag; // 0x60
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Ursa : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -99771,6 +100045,7 @@ class CPulseCell_LimitCount::InstanceState_t // pulse_runtime_lib
 	int32 m_nCurrentCount; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_RotatableBuilding : public C_DOTA_BaseNPC // client
 {
 	HSequence m_hObsoleteHeroStatueSequence; // 0x6576
@@ -100185,6 +100460,7 @@ class CIngameEvent_TI2020 : public C_IngameEvent_Base // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Promo : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -100452,7 +100728,8 @@ class C_DOTAGamerules : public C_MultiplayRules // client
 	int32 m_nDireSeriesWins; // 0x988
 	C_UtlVectorEmbeddedNetworkVar< CHeroesPerPlayer > m_vecAvailableHerosPerPlayerID; // 0x992
 	C_UtlVectorEmbeddedNetworkVar< CHeroesPerPlayer > m_vecLockedHerosByPlayerID; // 0x1096
-	C_UtlVectorEmbeddedNetworkVar< CHeroclass CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public C_DOTA_BaseNPC_Additive // client
+	C_UtlVectorEmbeddedNetworkVar< CHero!!! TARGET CLASS !!!
+class CDOTA_BaseNPC_Phantom_Assassin_GroundDagger : public C_DOTA_BaseNPC_Additive // client
 {
 	ParticleIndex_t m_nFXIndex; // 0x6576
 };
@@ -100893,6 +101170,7 @@ class C_DOTA_NPC_TechiesMines : public C_DOTA_BaseNPC_Additive // client
 	bool m_bShowPlacementRadius; // 0x6580
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Beastmaster_Boar : public C_DOTA_Unit_Hero_Beastmaster_Beasts // client
 {
 };
@@ -101094,6 +101372,7 @@ class CPulseCell_Step_DebugLog : public CPulseCell_BaseFlow // pulse_runtime_lib
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Slardar : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -101566,6 +101845,7 @@ class PulseNodeDynamicOutflows_t // pulse_runtime_lib
 	CUtlVector< PulseNodeDynamicOutflows_t::DynamicOutflow_t > m_Outflows; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Mars : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -101719,6 +101999,7 @@ class CPlayer_MovementServices_Humanoid : public CPlayer_MovementServices // cli
 	int32 m_nStepside; // 0x640
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Necrolyte : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -101935,15 +102216,18 @@ class CPulseCell_IsRequirementValid::Criteria_t // pulse_runtime_lib
 	bool m_bIsValid; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Chen : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Kunkka : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nFXIndex; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Effigy_Statue : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -102378,6 +102662,7 @@ class CPulseCell_Inflow_ObservableVariableListener : public CPulseCell_Inflow_Ba
 	bool m_bSelfReference; // 0x130
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Largo_Frogling : public C_DOTA_BaseNPC_Additive // client
 {
 	CHandle< C_DOTA_BaseNPC_Hero > m_hHeroHandle; // 0x6576
@@ -102682,6 +102967,7 @@ class CIngameEvent_SeasonalRewardLine : public C_IngameEvent_Base // client
 	int32 m_eventID; // 0x6584
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Dazzle : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -102841,10 +103127,12 @@ class TransitioningLayer_t // client
 	float32 m_flFadeOutDuration; // 0x68
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Shredder : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Rubick : public C_DOTA_BaseNPC_Hero // client
 {
 	Vector m_stolenAbilityColorHSV1; // 0x7552
@@ -103031,6 +103319,7 @@ class C_IngameEvent_TI6 : public C_IngameEvent_Base // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DoomBringer : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -103300,6 +103589,7 @@ class CPulseCell_Outflow_CycleOrdered : public CPulseCell_BaseFlow // pulse_runt
 	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Tinker_Turret : public C_DOTA_BaseNPC_Additive // client
 {
 	QAngle m_angle; // 0x6576
@@ -103516,6 +103806,7 @@ class CCollisionProperty // client
 	float32 m_flCapsuleRadius; // 0x172
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Hero : public C_DOTA_BaseNPC_Additive // client
 {
 	bool m_bDisableWearables; // 0x6584
@@ -103998,6 +104289,7 @@ class CAttributeContainer : public CAttributeManager // client
 	C_EconItemView m_Item; // 0x104
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Bristleback : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -104159,11 +104451,13 @@ class PulseSelectorOutflowList_t // pulse_runtime_lib
 	CUtlVector< OutflowWithRequirements_t > m_Outflows; // 0x0
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Legion_Commander : public C_DOTA_BaseNPC_Hero // client
 {
 	uint32 m_unDuelsWon; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Warlock : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -104330,6 +104624,7 @@ class CBodyComponentSkeletonInstance : public CBodyComponent // client
 	CSkeletonInstance m_skeletonInstance; // 0x128
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Razor : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_iPoseParameterAim; // 0x7552
@@ -104858,6 +105153,7 @@ class CScriptComponent : public CEntityComponent // entity2
 	CUtlSymbolLarge m_scriptClassName; // 0x48
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Trap_Ward : public C_DOTA_BaseNPC_Creature // client
 {
 };
@@ -105160,6 +105456,7 @@ class CDOTA_Modifier_Axe_CullingBlade_JungleWeaponGesture : public CDOTA_Buff //
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Jakiro : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -105735,11 +106032,13 @@ class CDOTA_Modifier_Tower_Truesight_Aura : public CDOTA_Modifier_Truesight_Aura
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Grimstroke : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creep_Siege : public C_DOTA_BaseNPC_Creep_Lane // client
 {
 };
@@ -105855,6 +106154,7 @@ class CDOTA_Modifier_Mirana_Nightveil : public CDOTA_Buff // client
 	bool m_bInvisLastThink; // 0x6760
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_LotusPool : public C_DOTA_BaseNPC_Building // client
 {
 	int32 m_nLotusCount; // 0x6688
@@ -106232,6 +106532,7 @@ class CDOTA_Modifier_No_Invisibility : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Ogre_Magi : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -106365,11 +106666,13 @@ class CDOTA_Modifier_Death_Prophet_MourningRitual : public CDOTA_Buff // client
 	float32 damage_interval; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_PhantomAssassin : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_Penguin : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -106674,6 +106977,7 @@ class CEffectData // client
 	uint16 m_iEffectName; // 0x108
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_EarthSpirit : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -106901,6 +107205,7 @@ class CPulseCell_Outflow_CycleShuffled : public CPulseCell_BaseFlow // pulse_run
 	CUtlVector< CPulse_OutflowConnection > m_Outputs; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_ArcWarden : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nTalkFXIndex; // 0x7552
@@ -106908,6 +107213,7 @@ class CDOTA_Unit_Hero_ArcWarden : public C_DOTA_BaseNPC_Hero // client
 	ParticleIndex_t m_nTempestFX; // 0x7560
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Juggernaut : public C_DOTA_BaseNPC_Hero // client
 {
 	uint32 m_unOmniKills; // 0x7552
@@ -107043,6 +107349,7 @@ class CDOTA_Modifier_TempAttackSpeedBoosted : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_CrystalMaiden : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_iParticleMouthIndex; // 0x7552
@@ -107525,6 +107832,7 @@ class C_DOTA_Wisp_Spirit : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Nyx_Assassin : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -108228,6 +108536,7 @@ class CPulseCell_BooleanSwitchState : public CPulseCell_BaseState // pulse_runti
 	CPulse_OutflowConnection m_WhenFalse; // 0x408
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Sniper : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -108461,24 +108770,29 @@ class VPhysicsCollisionAttribute_t // client
 	uint8 m_nCollisionFunctionMask; // 0x47
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DarkWillow : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Pangolier : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Tusk_Sigil : public C_DOTA_BaseNPC_Additive // client
 {
 	QAngle m_angInitialAngles; // 0x6576
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DarkSeer : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nNormalPunchBuffIndex; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Pugna : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nAimAngle; // 0x7552
@@ -108687,6 +109001,7 @@ class CDOTA_Modifier_TrueSightFoW : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Gyrocopter : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -108849,18 +109164,22 @@ class CPulseCell_Inflow_Yield : public CPulseCell_BaseYieldingInflow // pulse_ru
 	CPulse_ResumePoint m_UnyieldResume; // 0x216
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Enchantress : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Puck : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_CNY_Balloon : public C_DOTA_BaseNPC_Additive // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_NeutralItemStash : public C_DOTA_BaseNPC_Building // client
 {
 	CUtlVector< ParticleIndex_t > m_vecNewItemFX; // 0x6704
@@ -109171,6 +109490,7 @@ class CPlayer_UseServices : public CPlayerPawnComponent // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Weaver : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -109296,6 +109616,7 @@ class CGameSceneNodeHandle // client
 	CUtlStringToken m_name; // 0x12
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_NightStalker : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -109895,6 +110216,7 @@ class CDOTA_Modifier_Antimage_DampenMagic_Bonus : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_WitchDoctor : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -110059,6 +110381,7 @@ class CPulseCell_Step_PublicOutput : public CPulseCell_BaseFlow // pulse_runtime
 	PulseRuntimeOutputIndex_t m_OutputIndex; // 0x72
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Additive : public C_DOTA_BaseNPC // client
 {
 };
@@ -110205,6 +110528,7 @@ class CDOTA_Modifier_CommandRestricted : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Leshrac : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -110331,6 +110655,7 @@ class CDOTA_Modifier_AncientApparition_BoneChill_Debuff : public CDOTA_Buff // c
 	float32 m_flTotalStrLost; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Terrorblade : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
@@ -110424,10 +110749,12 @@ class CDOTA_Modifier_Aura : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Batrider : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creep_Talking : public C_DOTA_BaseNPC_Creep // client
 {
 };
@@ -111354,6 +111681,7 @@ class C_SoundOpvarSetPointEntity : public C_SoundOpvarSetPointBase // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Naga_Siren : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -111808,6 +112136,7 @@ class CDOTA_Modifier_Lina_Slow_BurnIntrinsic : public CDOTA_Buff // client
 	float32 burn_duration; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Tiny : public C_DOTA_BaseNPC_Hero // client
 {
 	CHandle< C_BaseEntity > m_hTreeWearable; // 0x7552
@@ -111986,10 +112315,12 @@ class CAnimationLayer // client
 	bool m_bHasFadedIn; // 0x156
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_StormSpirit : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Effigy_BattleCup : public C_DOTA_BaseNPC_Building // client
 {
 };
@@ -112123,6 +112454,7 @@ class CDOTA_Modifier_Morphling_Waveform : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Meepo : public C_DOTA_BaseNPC_Hero // client
 {
 	int32 m_nWhichMeepo; // 0x7576
@@ -112222,6 +112554,7 @@ class CDOTA_Modifier_Pudge_Dismember_Gluttony_Strength_Stack : public CDOTA_Buff
 	int32 gluttony_strength_bonus; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_HoldoutTower : public C_DOTA_BaseNPC_Tower // client
 {
 	DOTA_HOLDOUT_TOWER_TYPE m_iTowerType; // 0x6800
@@ -112609,6 +112942,7 @@ class fogparams_t // client
 	bool m_bPadding; // 0x103
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Undying : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -112734,6 +113068,7 @@ class CDOTA_Modifier_SecondaryUnit_Taunt : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Huskar : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -113319,10 +113654,12 @@ class CIngameEvent_TI2024 : public C_IngameEvent_Base // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Roshans_Banner : public C_DOTA_BaseNPC_Additive // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_HoldoutTower_LightFast : public C_DOTA_BaseNPC_HoldoutTower // client
 {
 };
@@ -113516,6 +113853,7 @@ class C_DOTA_Unit_Earth_Spirit_Stone : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creep_Neutral : public C_DOTA_BaseNPC_Creep // client
 {
 	CUtlString m_sDisplayName; // 0x6584
@@ -113778,10 +114116,12 @@ class CDOTA_Modifier_SetScaleset : public CDOTA_Buff // client
 	bool m_bActive; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Slark : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_SpiritBreaker : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -114285,6 +114625,7 @@ class CDOTA_Modifier_PoisonNova_Thinker : public CDOTA_Buff // client
 	float32 duration; // 0x6788
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Rattletrap : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -114386,10 +114727,12 @@ class CPulse_CallInfo // pulse_runtime_lib
 	int32 m_nSrcInstruction; // 0x80
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_BountyHunter : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Beastmaster : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -114398,6 +114741,7 @@ class CDOTA_Unit_CustomGameAnnouncer : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Creature : public C_DOTA_BaseNPC_Creep // client
 {
 	bool m_bIsCurrentlyChanneling; // 0x6584
@@ -114650,6 +114994,7 @@ class CPulseCell_InlineNodeSkipSelector : public CPulseCell_BaseFlow // pulse_ru
 	CPulse_OutflowConnection m_FailOutflow; // 0x104
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Drums : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -114809,6 +115154,7 @@ class CDOTA_AbilityDraftHeroState // client
 	PlayerID_t m_unPlayerID; // 0x52
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Abaddon : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -114968,6 +115314,7 @@ class CDOTA_Modifier_Zuus_Static_Field_Slow : public CDOTA_Buff // client
 	int32 cast_slow; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Roshan : public C_DOTA_BaseNPC_Additive // client
 {
 	int32 m_iKillerTeam; // 0x6576
@@ -115325,10 +115672,12 @@ class CDOTA_Muerta_Revenant : public C_DOTA_BaseNPC // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_ChaosKnight : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Seasonal_Snowman : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -115475,15 +115824,18 @@ class CPlayer_WeaponServices : public CPlayerPawnComponent // client
 	uint16[32] m_iAmmo; // 0x104
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Kez : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Techies : public C_DOTA_BaseNPC_Hero // client
 {
 	bool m_bLastDeathFromSuicide; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Spectre : public C_DOTA_BaseNPC_Hero // client
 {
 	uint8 m_unCurrentArcanaKillStreak; // 0x7552
@@ -115492,6 +115844,7 @@ class C_DOTA_Unit_Hero_Spectre : public C_DOTA_BaseNPC_Hero // client
 	bool m_bArcanaKillstreakRecordBroken; // 0x7560
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_DragonKnight : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -115657,6 +116010,7 @@ class CDOTA_Modifier_Earthshaker_Slugger_Intrinsic : public CDOTA_Buff // client
 	CUtlVector< AttackRecord_t > m_EnchantTotemAttackRecords; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_VengefulSpirit : public C_DOTA_BaseNPC_Hero // client
 {
 	bool m_bArcanaEquipped; // 0x7552
@@ -115826,10 +116180,12 @@ class CDOTA_Modifier_Zuus_ThunderTrail_Debuff : public CDOTA_Buff // client
 	int32 debuff_spell_amp; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Lycan : public C_DOTA_BaseNPC_Hero // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Morphling : public C_DOTA_BaseNPC_Hero // client
 {
 	CUtlString szReplicateIconMod; // 0x7552
@@ -115919,6 +116275,7 @@ class CPulseCell_Step_CallExternalMethod : public CPulseCell_BaseYieldingInflow 
 	CPulse_ResumePoint m_OnFinished; // 0x264
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_FacelessVoid : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -116061,6 +116418,7 @@ class CDOTA_Modifier_Juggernaut_BladeFury_Pull : public CDOTA_Buff // client
 	int32 movement_slow; // 0x6744
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_Venomancer_PlagueWard : public C_DOTA_BaseNPC_Additive // client
 {
 	bool m_bIsMovable; // 0x6576
@@ -116259,6 +116617,7 @@ class CDOTA_Modifier_StackedNeutral : public CDOTA_Buff // client
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Omniknight : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -116957,12 +117316,14 @@ class CDOTA_Modifier_SkeletonKing_SpectralBlade_Curse : public CDOTA_Buff // cli
 	float32 creep_lifesteal_reduction_pct; // 0x6748
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Phoenix : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXAmbientSpirits; // 0x7552
 	bool m_bDetermineAmbientEffect; // 0x7556
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Bloodseeker : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -117102,6 +117463,7 @@ class C_DOTA_Unit_Broodmother_Spiderling : public C_DOTA_BaseNPC_Creep_Talking /
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_BaseNPC_HallofFame : public C_DOTA_BaseNPC_Building // client
 {
 	int32 m_HallofFame; // 0x6688
@@ -117622,6 +117984,7 @@ class CDOTA_Modifier_DataDriven : public CDOTA_Buff // client
 	KeyValues* m_pOnAttackCancelled; // 0x16872
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Broodmother : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -117802,6 +118165,7 @@ class CDOTA_Modifier_Riki_SmokeScreen : public CDOTA_Buff // client
 	int32 armor_reduction; // 0x6756
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_Dragon : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -117998,6 +118362,7 @@ class CDOTA_Modifier_Weaver_Shukuchi_GeminateAttackMark : public CDOTA_Buff // c
 {
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_LoneDruid : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -118310,6 +118675,7 @@ class CDOTA_Modifier_SandKing_CausticFinale : public CDOTA_Buff // client
 	CUtlVector< AttackRecord_t > m_InFlightAttackRecords; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_Unit_Hero_Ringmaster : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -118691,6 +119057,7 @@ class C_DOTAGameManagerProxy : public C_BaseEntity // client
 	C_DOTAGameManager* m_pGameManager; // 0x1520
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Lina : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -118884,6 +119251,7 @@ class CDOTA_Modifier_Drow_Ranger_Glacier_Hilltop : public CDOTA_Buff // client
 	int32 attack_range_bonus; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_QueenOfPain : public C_DOTA_BaseNPC_Hero // client
 {
 };
@@ -119189,11 +119557,13 @@ class CDOTA_Modifier_Rune_Shield : public CDOTA_Buff // client
 	int32 m_nDamageAbsorbed; // 0x6752
 };
 
+!!! TARGET CLASS !!!
 class C_DOTA_Unit_Hero_Nevermore : public C_DOTA_BaseNPC_Hero // client
 {
 	ParticleIndex_t m_nFXDeath; // 0x7552
 };
 
+!!! TARGET CLASS !!!
 class CDOTA_BaseNPC_Seasonal_TI9_Monkey : public C_DOTA_BaseNPC_Additive // client
 {
 };
@@ -119512,6 +119882,14 @@ enum PulseCursorWakePriority_t : uint32_t
 	WakeElegantly = 0x0,
 	WakeImmediate = 0x1,
 };
+
+
+NumSchema: 0
+
+NumSchema: 1
+
+NumSchema: 0
+
 
 [+] ========================================
 [+] Total classes dumped: 16475
